@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function HomeSection() {
   return (
     <Grid id="home" bg={MAIN_COLOR_GREY} pt={70}>
-      <Grid.Col span={{ base: 12, md: 6 }}>
+      <Grid.Col span={{ base: 12, sm: 6 }}>
         <Flex justify={"center"} h={"100%"} pt={40}>
           <Image
             width={300}
@@ -16,7 +16,7 @@ export default function HomeSection() {
           />
         </Flex>
       </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 6 }} px={40}>
+      <Grid.Col span={{ base: 12, sm: 6 }} px={40}>
         <Flex direction={"column"} gap={"md"} justify={"center"} h={"100%"}>
           <Title c={MAIN_COLOR_WHITE} className="text-center">
             Hi,

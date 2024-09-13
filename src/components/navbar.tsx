@@ -7,7 +7,7 @@ export default function Navbar() {
   const [opened, { toggle }] = useDisclosure();
 
   return (
-    <div style={{ position: "fixed", width: "100%" }}>
+    <div style={{ position: "fixed", width: "100%", zIndex: 999 }}>
       <Flex
         bg={MAIN_COLOR_BLACK}
         h={70}
@@ -22,8 +22,8 @@ export default function Navbar() {
 
         <Group visibleFrom="sm" gap={40}>
           <NavMenu href="#home">Home</NavMenu>
+          <NavMenu href="#">Certificates</NavMenu>
           <NavMenu href="#">Projects</NavMenu>
-          <NavMenu href="#">Certification</NavMenu>
           <NavMenu href="#">Contacts</NavMenu>
         </Group>
 
