@@ -1,10 +1,11 @@
 import { MAIN_COLOR_GREY, MAIN_COLOR_WHITE } from "@/constants/colors";
+import { Sections } from "@/constants/sections";
 import { Flex, Grid, Text, Title } from "@mantine/core";
 import Image from "next/image";
 
 export default function HomeSection() {
   return (
-    <Grid id="home" bg={MAIN_COLOR_GREY} pt={70}>
+    <Grid id={Sections.HOME} bg={MAIN_COLOR_GREY} pt={70}>
       <Grid.Col span={{ base: 12, sm: 6 }}>
         <Flex justify={"center"} h={"100%"} pt={40}>
           <Image

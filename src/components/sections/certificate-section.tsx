@@ -1,5 +1,6 @@
 import { MAIN_COLOR_BLACK, MAIN_COLOR_WHITE } from "@/constants/colors";
-import { certificates } from "@/utils/data";
+import { Sections } from "@/constants/sections";
+import { certificates } from "@/utils/data/certificates";
 import { Image, Title } from "@mantine/core";
 import {
   Autoplay,
@@ -13,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function CertificateSection() {
   return (
     <div
-      id="certificates"
+      id={Sections.CERTIFICATES}
       style={{
         marginTop: -10,
         backgroundColor: MAIN_COLOR_BLACK,

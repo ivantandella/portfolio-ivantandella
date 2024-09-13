@@ -3,6 +3,8 @@ import WaveUp from "@/components/assets/wave-up";
 import Navbar from "@/components/navbar";
 import CertificateSection from "@/components/sections/certificate-section";
 import HomeSection from "@/components/sections/home-section";
+import ProjectSection from "@/components/sections/project-section";
+import SocialsSection from "@/components/sections/socials-section";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,13 +17,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div style={{ height: 2000 }}>
+      <main>
         <Navbar />
         <HomeSection />
         <WaveDown />
         <CertificateSection />
         <WaveUp />
-      </div>
+        <ProjectSection />
+        <WaveDown />
+        <SocialsSection />
+      </main>
     </>
   );
 }

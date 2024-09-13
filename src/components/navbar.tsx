@@ -2,6 +2,7 @@ import { MAIN_COLOR_BLACK, MAIN_COLOR_WHITE } from "@/constants/colors";
 import { Burger, Flex, Group, Menu, Text } from "@mantine/core";
 import NavMenu from "./nav-menu";
 import { useDisclosure } from "@mantine/hooks";
+import { Sections } from "@/constants/sections";
 
 export default function Navbar() {
   const [opened, { toggle }] = useDisclosure();
@@ -21,10 +22,10 @@ export default function Navbar() {
         </Text>
 
         <Group visibleFrom="sm" gap={40}>
-          <NavMenu href="#home">Home</NavMenu>
-          <NavMenu href="#">Certificates</NavMenu>
-          <NavMenu href="#">Projects</NavMenu>
-          <NavMenu href="#">Contacts</NavMenu>
+          <NavMenu href={`#${Sections.HOME}`}>Home</NavMenu>
+          <NavMenu href={`#${Sections.CERTIFICATES}`}>Certificates</NavMenu>
+          <NavMenu href={`#${Sections.PROJECTS}`}>Projects</NavMenu>
+          <NavMenu href={`#${Sections.CONTACTS}`}>Contacts</NavMenu>
         </Group>
 
         <Group hiddenFrom="sm">
@@ -38,18 +39,18 @@ export default function Navbar() {
               />
             </Menu.Target>
 
-            <Menu.Dropdown>
-              <Menu.Item onClick={() => toggle()}>
-                <a href="#home">Home</a>{" "}
+            <Menu.Dropdown mt={10}>
+              <Menu.Item onClick={toggle}>
+                <a href={`#${Sections.HOME}`}>Home</a>
               </Menu.Item>
-              <Menu.Item onClick={() => toggle()}>
-                <a href="#">Projects</a>{" "}
+              <Menu.Item onClick={toggle}>
+                <a href={`#${Sections.CERTIFICATES}`}>Certificates</a>
               </Menu.Item>
-              <Menu.Item onClick={() => toggle()}>
-                <a href="#">Certification</a>
+              <Menu.Item onClick={toggle}>
+                <a href={`#${Sections.PROJECTS}`}>Projects</a>
               </Menu.Item>
-              <Menu.Item onClick={() => toggle()}>
-                <a href="#">Contact</a>{" "}
+              <Menu.Item onClick={toggle}>
+                <a href={`#${Sections.CONTACTS}`}>Contact</a>
               </Menu.Item>
             </Menu.Dropdown>
           </Menu>
