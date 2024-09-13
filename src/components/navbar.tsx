@@ -25,7 +25,7 @@ export default function Navbar() {
           <NavMenu href={`#${Sections.HOME}`}>Home</NavMenu>
           <NavMenu href={`#${Sections.CERTIFICATES}`}>Certificates</NavMenu>
           <NavMenu href={`#${Sections.PROJECTS}`}>Projects</NavMenu>
-          <NavMenu href={`#${Sections.CONTACTS}`}>Contacts</NavMenu>
+          <NavMenu href={`#${Sections.SOCIALS}`}>Socials</NavMenu>
         </Group>
 
         <Group hiddenFrom="sm">
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <a href={`#${Sections.PROJECTS}`}>Projects</a>
               </Menu.Item>
               <Menu.Item onClick={toggle}>
-                <a href={`#${Sections.CONTACTS}`}>Contact</a>
+                <a href={`#${Sections.SOCIALS}`}>Socials</a>
               </Menu.Item>
             </Menu.Dropdown>
           </Menu>

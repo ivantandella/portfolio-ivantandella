@@ -18,18 +18,27 @@ export default function HomeSection() {
         </Flex>
       </Grid.Col>
       <Grid.Col span={{ base: 12, sm: 6 }} px={40}>
-        <Flex direction={"column"} gap={"md"} justify={"center"} h={"100%"}>
-          <Title c={MAIN_COLOR_WHITE} className="text-center">
-            Hi,
+        <Flex
+          direction={"column"}
+          gap={"md"}
+          justify={"center"}
+          h={"100%"}
+          c={MAIN_COLOR_WHITE}
+        >
+          <Title className="text-center">Hi,</Title>
+          <Title className="text-center">
+            I'm <span className="accent-color bounce2">IVAN TANDELLA</span>
           </Title>
-          <Title c={MAIN_COLOR_WHITE} className="text-center">
-            I'm <span className="accent-color">IVAN TANDELLA</span>
-          </Title>
-          <Text c={MAIN_COLOR_WHITE} className="text-center">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
-            reiciendis iste ab magni nisi, excepturi dolorum veritatis nihil,
-            voluptatem amet sapiente eligendi labore! Voluptates alias explicabo
-            quam eius distinctio cumque.
+          <Text className="text-center">
+            I am an Information Technology graduate from Universitas Sumatera
+            Utara with a strong interest in Data Science and Web Development. My
+            quick learning ability and eagerness to learn new things have
+            consistently driven my professional growth. Known for a
+            well-organized person and my excellent time management, I
+            effectively balance multiple responsibilities and consistently meet
+            deadlines. I am committed to leveraging my skills to contribute to
+            innovative tech solutions and advance my career in the field of
+            technology.
           </Text>
         </Flex>
       </Grid.Col>

@@ -64,9 +64,40 @@ a:hover {
   }
 }
 
-.project-section {
+.project-container {
+  width: 100%;
+  padding: 0 100px;
+
+  @media (max-width: 36em) {
+    padding: 0 40px;
+  }
+}
+
+.project-card {
+  min-width: 90%;
+}
+
+.project-image {
+  @media (max-width: 64em) {
+    max-width: 400px;
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.project-text {
+  @media (max-width: 36em) {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+.project-text > p {
+  min-height: 180px;
   @media (max-width: 48em) {
-    margin-top: -30px;
+    min-height: 200px;
+    max-height: 300px;
   }
 }
 

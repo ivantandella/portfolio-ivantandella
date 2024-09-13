@@ -7,7 +7,6 @@ import {
   EffectCoverflow,
   Navigation,
   Pagination,
-  Scrollbar,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,13 +17,14 @@ export default function CertificateSection() {
       style={{
         marginTop: -10,
         backgroundColor: MAIN_COLOR_BLACK,
+        paddingBottom: 30,
       }}
     >
-      <Title c={MAIN_COLOR_WHITE} ta={"center"} mb={20}>
+      <Title c={MAIN_COLOR_WHITE} ta={"center"} mb={50}>
         Certificates
       </Title>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, Autoplay, EffectCoverflow]}
+        modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         effect={"coverflow"}
         coverflowEffect={{
           rotate: 50,
@@ -42,7 +42,6 @@ export default function CertificateSection() {
         navigation
         loop
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         breakpoints={{
           640: {
             slidesPerView: 1,

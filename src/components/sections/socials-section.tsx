@@ -9,7 +9,7 @@ export default function SocialsSection() {
     <Grid
       id={Sections.SOCIALS}
       mt={-10}
-      pb={100}
+      pb={50}
       bg={MAIN_COLOR_BLACK}
       px={100}
       c={MAIN_COLOR_WHITE}
@@ -21,7 +21,7 @@ export default function SocialsSection() {
           justify={"center"}
           h={"100%"}
         >
-          <InView>
+          <InView threshold={0.5}>
             {({ inView, ref }) => (
               <h1 ref={ref} className={inView ? "hithere connect" : " connect"}>
                 Let's <br /> Connect!
@@ -42,12 +42,6 @@ export default function SocialsSection() {
               </Text>
             </GridCol>
           </Grid>
-          // <Group key={social.title} mb={20}>
-          //   {social.icon}
-          //   <Text size="xl">
-          //     <a href={social.link}>{social.username}</a>{" "}
-          //   </Text>
-          // </Group>
         ))}
       </GridCol>
     </Grid>
