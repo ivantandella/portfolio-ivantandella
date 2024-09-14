@@ -1,7 +1,9 @@
 export enum Sections {
   HOME = "home",
-  CERTIFICATES = "certificates",
+  EXPERIENCE = "experience",
   PROJECTS = "projects",
+  CERTIFICATES = "certificates",
+  SKILL = "skill",
   SOCIALS = "socials",
 }
 

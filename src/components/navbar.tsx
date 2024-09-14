@@ -31,8 +31,10 @@ export default function Navbar() {
 
         <Group visibleFrom="sm" gap={40}>
           <NavMenu href={`#${Sections.HOME}`}>Home</NavMenu>
-          <NavMenu href={`#${Sections.CERTIFICATES}`}>Certificates</NavMenu>
+          <NavMenu href={`#${Sections.EXPERIENCE}`}>Experiences</NavMenu>
           <NavMenu href={`#${Sections.PROJECTS}`}>Projects</NavMenu>
+          <NavMenu href={`#${Sections.CERTIFICATES}`}>Certificates</NavMenu>
+          <NavMenu href={`#${Sections.SKILL}`}>Skills</NavMenu>
           <NavMenu href={`#${Sections.SOCIALS}`}>Socials</NavMenu>
         </Group>
 
@@ -52,10 +54,16 @@ export default function Navbar() {
                 <a href={`#${Sections.HOME}`}>Home</a>
               </Menu.Item>
               <Menu.Item onClick={toggle} c={MAIN_COLOR_WHITE}>
-                <a href={`#${Sections.CERTIFICATES}`}>Certificates</a>
+                <a href={`#${Sections.EXPERIENCE}`}>Experiences</a>
               </Menu.Item>
               <Menu.Item onClick={toggle} c={MAIN_COLOR_WHITE}>
                 <a href={`#${Sections.PROJECTS}`}>Projects</a>
+              </Menu.Item>
+              <Menu.Item onClick={toggle} c={MAIN_COLOR_WHITE}>
+                <a href={`#${Sections.CERTIFICATES}`}>Certificates</a>
+              </Menu.Item>
+              <Menu.Item onClick={toggle} c={MAIN_COLOR_WHITE}>
+                <a href={`#${Sections.SKILL}`}>Skills</a>
               </Menu.Item>
               <Menu.Item onClick={toggle} c={MAIN_COLOR_WHITE}>
                 <a href={`#${Sections.SOCIALS}`}>Socials</a>
