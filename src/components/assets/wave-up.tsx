@@ -5,7 +5,7 @@ export default function WaveUp() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
-      style={{ backgroundColor: MAIN_COLOR_BLACK }}
+      style={{ backgroundColor: MAIN_COLOR_BLACK, marginTop: -10 }}
     >
       <path
         fill={MAIN_COLOR_GREY}

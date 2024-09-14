@@ -1,10 +1,10 @@
-import { MAIN_COLOR_GREY, MAIN_COLOR_WHITE } from "@/constants/colors";
+import { MAIN_COLOR_GREY } from "@/constants/colors";
 import { Sections } from "@/constants/sections";
 import { projects } from "@/utils/data/projects";
-import { Title } from "@mantine/core";
 import { Autoplay, EffectCards } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "../project-card";
+import SectionTitle from "../section-title";
 
 export default function ProjectSection() {
   return (
@@ -16,15 +16,13 @@ export default function ProjectSection() {
         paddingBottom: 50,
       }}
     >
-      <Title c={MAIN_COLOR_WHITE} ta={"center"} mb={50}>
-        Projects
-      </Title>
+      <SectionTitle>Projects</SectionTitle>
       <div className="project-container">
         <Swiper
           effect={"cards"}
           grabCursor={true}
           autoplay={{
-            delay: 10000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           modules={[EffectCards, Autoplay]}

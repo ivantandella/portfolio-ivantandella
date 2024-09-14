@@ -1,7 +1,7 @@
-import { MAIN_COLOR_BLACK, MAIN_COLOR_WHITE } from "@/constants/colors";
+import { MAIN_COLOR_BLACK } from "@/constants/colors";
 import { Sections } from "@/constants/sections";
 import { certificates } from "@/utils/data/certificates";
-import { Image, Title } from "@mantine/core";
+import { Image } from "@mantine/core";
 import {
   Autoplay,
   EffectCoverflow,
@@ -9,6 +9,7 @@ import {
   Pagination,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SectionTitle from "../section-title";
 
 export default function CertificateSection() {
   return (
@@ -20,9 +21,7 @@ export default function CertificateSection() {
         paddingBottom: 30,
       }}
     >
-      <Title c={MAIN_COLOR_WHITE} ta={"center"} mb={50}>
-        Certificates
-      </Title>
+      <SectionTitle>Certificates</SectionTitle>
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         effect={"coverflow"}
