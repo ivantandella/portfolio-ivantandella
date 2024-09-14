@@ -14,7 +14,7 @@ export default function SocialsSection() {
       px={100}
       c={MAIN_COLOR_WHITE}
     >
-      <GridCol span={{ base: 12, xs: 6 }}>
+      <GridCol span={{ base: 12, sm: 6 }}>
         <Flex
           direction={"column"}
           align={"center"}
@@ -30,7 +30,7 @@ export default function SocialsSection() {
           </InView>
         </Flex>
       </GridCol>
-      <GridCol span={{ base: 12, xs: 6 }}>
+      <GridCol span={{ base: 12, sm: 6 }}>
         {Socials.map((social) => (
           <Grid key={social.title} align="center">
             <GridCol span={4} ta={"right"}>

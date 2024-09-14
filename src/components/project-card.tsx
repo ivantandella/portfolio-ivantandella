@@ -24,12 +24,12 @@ export default function ProjectCard(props: ProjectCardProps) {
       className="project-card"
     >
       <Grid>
-        <GridCol span={{ base: 12, md: 4 }}>
+        <GridCol span={{ base: 12 }}>
           <div className="project-image">
             <Image src={project.image} alt={project.title} />
           </div>
         </GridCol>
-        <GridCol span={{ base: 12, md: 8 }}>
+        <GridCol span={{ base: 12 }}>
           <div className="project-text">
             <h2>{project.title}</h2>
             <p>{project.description}</p>

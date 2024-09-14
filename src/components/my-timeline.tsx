@@ -1,5 +1,5 @@
 import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
@@ -10,6 +10,8 @@ import Image from "next/image";
 import { ExperienceType } from "@/utils/data/experiences";
 import { Spoiler } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
+import { ACCENT_COLOR } from "@/constants/colors";
+import { UNIVERSAL_WIDTH } from "@/constants/sections";
 
 type MyTimelineProps = {
   experiences: ExperienceType;
@@ -17,11 +19,23 @@ type MyTimelineProps = {
 
 export default function MyTimeline(props: MyTimelineProps) {
   const { experiences } = props;
-  const matches = useMediaQuery("(min-width: 425px)");
+  const matches = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div style={{ maxWidth: 1440 }}>
-      <Timeline position={matches ? "alternate" : undefined}>
+    <div style={{ maxWidth: UNIVERSAL_WIDTH, margin: "auto" }}>
+      <Timeline
+        position={matches ? "alternate" : undefined}
+        sx={
+          matches
+            ? undefined
+            : {
+                [`& .${timelineItemClasses.root}:before`]: {
+                  flex: 0,
+                  padding: 0,
+                },
+              }
+        }
+      >
         {experiences.map((experience, index) => {
           const odd = index % 2 !== 0;
           const insetInlineStart = odd && matches ? "unset" : "0";
@@ -66,7 +80,7 @@ export default function MyTimeline(props: MyTimelineProps) {
                   mt={10}
                   styles={(theme) => ({
                     control: {
-                      color: "#ababab",
+                      color: ACCENT_COLOR,
                       fontSize: theme.fontSizes.sm,
                       insetInlineEnd: insetInlineEnd,
                       insetInlineStart: insetInlineStart,

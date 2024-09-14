@@ -11,7 +11,7 @@ export default function ProjectSection() {
     <div
       id={Sections.PROJECTS}
       style={{
-        marginTop: -50,
+        marginTop: -40,
         backgroundColor: MAIN_COLOR_GREY,
         paddingBottom: 50,
       }}
@@ -26,7 +26,7 @@ export default function ProjectSection() {
             disableOnInteraction: false,
           }}
           modules={[EffectCards, Autoplay]}
-          style={{ maxWidth: 1024 }}
+          style={{ maxWidth: 400 }}
         >
           {projects.map((project) => (
             <SwiperSlide key={project.title}>

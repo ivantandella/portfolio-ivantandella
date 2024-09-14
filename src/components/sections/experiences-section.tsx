@@ -5,7 +5,13 @@ import { experiences } from "@/utils/data/experiences";
 
 export default function ExperiencesSection() {
   return (
-    <div style={{ marginTop: -10, backgroundColor: MAIN_COLOR_BLACK }}>
+    <div
+      style={{
+        marginTop: -10,
+        paddingBottom: 40,
+        backgroundColor: MAIN_COLOR_BLACK,
+      }}
+    >
       <SectionTitle>Experiences</SectionTitle>
 
       <MyTimeline experiences={experiences} />

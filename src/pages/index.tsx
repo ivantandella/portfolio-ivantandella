@@ -5,6 +5,7 @@ import CertificateSection from "@/components/sections/certificate-section";
 import ExperiencesSection from "@/components/sections/experiences-section";
 import HomeSection from "@/components/sections/home-section";
 import ProjectSection from "@/components/sections/project-section";
+import SkillsSection from "@/components/sections/skills-section";
 import SocialsSection from "@/components/sections/socials-section";
 import Head from "next/head";
 
@@ -20,16 +21,25 @@ export default function Home() {
 
       <main>
         <Navbar />
-        <HomeSection />
-        <WaveDown />
-        <ExperiencesSection />
-        <WaveUp />
-        <ProjectSection />
-        <WaveDown />
-        <CertificateSection />
-        <WaveUp />
-        <WaveDown />
-        <SocialsSection />
+        <div
+          style={{
+            display: "absolute",
+            inset: 0,
+            overflowX: "hidden",
+          }}
+        >
+          <HomeSection />
+          <WaveDown />
+          <ExperiencesSection />
+          <WaveUp />
+          <ProjectSection />
+          <WaveDown />
+          <CertificateSection />
+          <WaveUp />
+          <SkillsSection />
+          <WaveDown />
+          <SocialsSection />
+        </div>
       </main>
     </>
   );
