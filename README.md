@@ -1,40 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ivan's Portfolio
 
-## Getting Started
+Hi there, This is my personal portfolio showcasing my skills, experiences, and projects as a web developer. Built with Next.js and React, this portfolio is designed to provide a comprehensive overview of my professional background and expertise.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This Web Portfolio is a responsive website built using Next.js and React. It highlights my best work and provides detailed information about my experience, skills, certifications, and projects. The site is hosted on Vercel, ensuring optimal performance and accessibility. [Check it out🚀](https://portfolio-ivantandella.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Sections
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Home**: Overview of the portfolio and a brief introduction.
+- **Experience**: Detailed information about my professional background and work history.
+- **Projects**: Showcase of selected projects with descriptions and links to repositories.
+- **Certifications**: Information about relevant certifications and achievements.
+- **Skills**: List of technical skills and proficiencies.
+- **Socials**: Links to my professional social profiles and contact information.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Contact
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+If you have any questions or feedback, feel free to reach out to me:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Email**: ivantandella2@gmail.com
+- **LinkedIn**: [linkedin.com/in/ivan-tandella](https://linkedin.com/in/ivan-tandella)
+- **GitHub**: [github.com/ivantandella](https://github.com/ivantandella)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for visiting my portfolio!
