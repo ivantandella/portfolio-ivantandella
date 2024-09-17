@@ -7,13 +7,17 @@ import { Sections } from "@/constants/sections";
 export default function SkillsSection() {
   return (
     <div
-      style={{ marginTop: -50, backgroundColor: MAIN_COLOR_GREY }}
+      style={{
+        marginTop: -50,
+        paddingBottom: 50,
+        backgroundColor: MAIN_COLOR_GREY,
+      }}
       id={Sections.SKILL}
     >
       <SectionTitle>Tech Stack</SectionTitle>
       <Flex
         direction={"row"}
-        gap={"md"}
+        gap={"lg"}
         wrap={"wrap"}
         justify={"center"}
         maw={1024}

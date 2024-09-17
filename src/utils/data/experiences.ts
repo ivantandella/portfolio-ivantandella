@@ -13,7 +13,7 @@ export const experiences = [
     date: "Aug 2024 - Present",
     image: "/images/experiences/springkraf.png",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, distinctio itaque. Repudiandae alias cum, quasi inventore nulla assumenda velit, at eum illum sequi ut unde sint quisquam dicta odio facere.",
+      "Springkraf is a company that helps digitalize businesses through the use of technology and system development. Springkraf is known for its focus on delivering customized tech solutions that meet the specific needs of its clients.",
   },
   {
     position: "Mentor",
