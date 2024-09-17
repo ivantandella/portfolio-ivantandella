@@ -2,10 +2,14 @@ import { MAIN_COLOR_GREY } from "@/constants/colors";
 import SectionTitle from "../section-title";
 import { Card, Flex, Image, Title } from "@mantine/core";
 import { skills } from "@/utils/data/skills";
+import { Sections } from "@/constants/sections";
 
 export default function SkillsSection() {
   return (
-    <div style={{ marginTop: -50, backgroundColor: MAIN_COLOR_GREY }}>
+    <div
+      style={{ marginTop: -50, backgroundColor: MAIN_COLOR_GREY }}
+      id={Sections.SKILL}
+    >
       <SectionTitle>Tech Stack</SectionTitle>
       <Flex
         direction={"row"}
