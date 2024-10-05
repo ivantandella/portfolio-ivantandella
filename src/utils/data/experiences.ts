@@ -13,7 +13,7 @@ export const experiences = [
     date: "Aug 2024 - Present",
     image: "/images/experiences/springkraf.png",
     description:
-      "- Developed responsive web application using React JS and Next.js.<br/>- Implementing athomic design methodology to break down UI elements into reuseable components for improved maintainability.<br/>-	Collaborated with Backend dan Design teams to ensure seamless integration.-	Utilized TypeScript for better type management and code clarity.",
+      "- Developed responsive web application using React JS and Next.js.<br/>- Implementing athomic design methodology to break down UI elements into reuseable components for improved maintainability.<br/>-	Collaborated with Backend dan Design teams to ensure seamless integration.<br/>-	Utilized TypeScript for better type management and code clarity.",
   },
   {
     position: "Mentor",
