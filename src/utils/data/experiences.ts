@@ -13,7 +13,7 @@ export const experiences = [
     date: "Aug 2024 - Present",
     image: "/images/experiences/springkraf.png",
     description:
-      "Springkraf is a company that helps digitalize businesses through the use of technology and system development. Springkraf is known for its focus on delivering customized tech solutions that meet the specific needs of its clients.",
+      "- Developed responsive web application using React JS and Next.js.<br/>- Implementing athomic design methodology to break down UI elements into reuseable components for improved maintainability.<br/>-	Collaborated with Backend dan Design teams to ensure seamless integration.-	Utilized TypeScript for better type management and code clarity.",
   },
   {
     position: "Mentor",
