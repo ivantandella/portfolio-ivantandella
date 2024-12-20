@@ -26,7 +26,7 @@ export default function ProjectSection() {
             disableOnInteraction: false,
           }}
           modules={[EffectCards, Autoplay]}
-          style={{ maxWidth: 400 }}
+          style={{ maxWidth: 600 }}
         >
           {projects.map((project) => (
             <SwiperSlide key={project.title}>
