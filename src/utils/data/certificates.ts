@@ -4,6 +4,11 @@ export const certificates = [
     image: "images/certificates/react_with_typescript.png",
   },
   {
+    title: "sertifikat_course_Belajar Fundamental Aplikasi Web dengan React",
+    image:
+      "images/certificates/sertifikat_course_Belajar Fundamental Aplikasi Web dengan React.jpg",
+  },
+  {
     title: "sertifikat_course_Belajar Membuat Aplikasi Web dengan React",
     image:
       "images/certificates/sertifikat_course_Belajar Membuat Aplikasi Web dengan React.jpg",
