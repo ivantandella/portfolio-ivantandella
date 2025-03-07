@@ -13,7 +13,7 @@ export const experiences = [
     date: "Aug 2024 - Present",
     image: "/images/experiences/springkraf.png",
     description:
-      "- Developed responsive web application using React JS and Next.js.<br/>- Implementing athomic design methodology to break down UI elements into reuseable components for improved maintainability.<br/>-	Collaborated with Backend dan Design teams to ensure seamless integration.<br/>-	Utilized TypeScript for better type management and code clarity.",
+      "- Developed responsive web application using React and Next.js.<br/>- Implementing athomic design methodology to break down UI elements into reuseable components for improved maintainability.<br/>-	Collaborated with Backend dan Design teams to ensure seamless integration.<br/>-	Utilized TypeScript for better type management and code clarity.",
   },
   {
     position: "Mentor",
@@ -29,6 +29,6 @@ export const experiences = [
     date: "Jan 2023 - Apr 2023",
     image: "/images/experiences/itfestusu.png",
     description:
-      "ITFest USU is an annual technology festival organized by the Information Technology Student Association at the University of Sumatera Utara (USU). The event aims to connect professionals, students, and industry players through a series of engaging and educational activities.<br/>- Developed web components including radio buttons, status tags, statistics cards, and tooltips to enhance user experience and functionality.<br/>- Built and maintained a comprehensive admin dashboard using Laravel and TailwindCSS, ensuring a responsive and user-friendly interface.<br/>- Identifying and fixing existing design issues to ensure consistency and high visual quality across web pages.",
+      "ITFest USU is an annual technology festival organized by the Information Technology Student Association at the University of Sumatera Utara (USU). The event aims to connect professionals, students, and industry players through a series of engaging and educational activities.<br/>- Developed reusable web components to reduce redundancy and improve code maintainability.<br/>- Built and maintained a comprehensive admin dashboard using Laravel and TailwindCSS, ensuring a responsive and user-friendly interface.<br/>- Identifying and fixing existing design issues to ensure consistency across web pages and enhance user experience and functionality.",
   },
 ];
