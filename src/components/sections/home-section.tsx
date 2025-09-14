@@ -39,14 +39,13 @@ export default function HomeSection() {
             </Title>
             <Text className="text-center">
               I am an Information Technology graduate from Universitas Sumatera
-              Utara with a strong interest in Data Science and Web Development.
-              My quick learning ability and eagerness to learn new things have
-              consistently driven my professional growth. Known for a
-              well-organized person and my excellent time management, I
-              effectively balance multiple responsibilities and consistently
-              meet deadlines. I am committed to leveraging my skills to
-              contribute to innovative tech solutions and advance my career in
-              the field of technology.
+              Utara with 1 year of experience in Frontend Development using
+              React. Passionate about Web Development with strong
+              problem-solving skills and a fast-learning mindset.
+              Well-organized, detail-oriented, and able to manage time
+              effectively to meet tight deadlines. Eager to contribute to
+              impactful tech solutions and grow professionally in the tech
+              industry.
             </Text>
           </Flex>
         </Grid.Col>

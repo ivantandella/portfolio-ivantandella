@@ -88,7 +88,7 @@ export default function MyTimeline(props: MyTimelineProps) {
                   })}
                 >
                   <div
-                    style={{ textAlign: "justify" }}
+                    style={{ textAlign: "justify", color: "#ababab" }}
                     dangerouslySetInnerHTML={{ __html: experience.description }}
                   />
                 </Spoiler>

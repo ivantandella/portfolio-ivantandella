@@ -13,7 +13,7 @@ export const experiences = [
     date: "Aug 2024 - Present",
     image: "/images/experiences/springkraf.png",
     description:
-      "- Developed responsive web application using React and Next.js.<br/>- Implementing athomic design methodology to break down UI elements into reuseable components for improved maintainability.<br/>-	Collaborated with Backend dan Design teams to ensure seamless integration.<br/>-	Utilized TypeScript for better type management and code clarity.",
+      "- Developed and maintained 2 responsive web applications using React.js and Next.js, ensuring optimal performance across devices.<br/>- Built a mobile application using React Native, delivering a smooth and consistent user experience.<br/>- Implemented Atomic Design principles to create reusable and scalable UI components, improving development efficiency.<br/>- Collaborated closely with Backend and UI/UX design teams to ensure seamless API integration and interface consistency.<br/>- Utilized TypeScript to enhance code quality, maintainability, and type safety across all projects",
   },
   {
     position: "Mentor",
@@ -21,7 +21,7 @@ export const experiences = [
     date: "Feb 2024 - Jul 2024",
     image: "/images/experiences/bangkit.png",
     description:
-      "Mentor plays a crucial role in guiding participants and providing a supportive learning environment that boosts students' motivation.<br/>- Lead and support a cohort of 25 students through weekly mentoring session, fostering their academic and personal growth.<br/>- Monitor students' learning progress throughout the program to ensure continuous improvement and addressing any challenges promptly.<br/>- Organize and facilitate 3 study group sessions to assist students facing difficulties to enhance their understanding and performance.<br/>- Assist instructors during sessions, monitor activities, and compile detailed reports for up to 14 Instructor-Led Training (ILT) sessions.",
+      "Mentor plays a crucial role in guiding participants and providing a supportive learning environment that boosts students' motivation.<br/><br/>- Lead and support a cohort of 25 students through weekly mentoring session, fostering their academic and personal growth.<br/>- Monitor students' learning progress throughout the program to ensure continuous improvement and addressing any challenges promptly.<br/>- Organize and facilitate 3 study group sessions to assist students facing difficulties to enhance their understanding and performance.<br/>- Assist instructors during sessions, monitor activities, and compile detailed reports for up to 14 Instructor-Led Training (ILT) sessions.",
   },
   {
     position: "Frontend Web Developer",
@@ -29,6 +29,6 @@ export const experiences = [
     date: "Jan 2023 - Apr 2023",
     image: "/images/experiences/itfestusu.png",
     description:
-      "ITFest USU is an annual technology festival organized by the Information Technology Student Association at the University of Sumatera Utara (USU). The event aims to connect professionals, students, and industry players through a series of engaging and educational activities.<br/>- Developed reusable web components to reduce redundancy and improve code maintainability.<br/>- Built and maintained a comprehensive admin dashboard using Laravel and TailwindCSS, ensuring a responsive and user-friendly interface.<br/>- Identifying and fixing existing design issues to ensure consistency across web pages and enhance user experience and functionality.",
+      "ITFest USU is an annual technology festival organized by the Information Technology Student Association at the University of Sumatera Utara (USU). The event aims to connect professionals, students, and industry players through a series of engaging and educational activities.<br/><br/>- Developed reusable web components to reduce redundancy and improve code maintainability.<br/>- Built and maintained a comprehensive admin dashboard using Laravel and TailwindCSS, ensuring a responsive and user-friendly interface.<br/>- Identifying and fixing existing design issues to ensure consistency across web pages and enhance user experience and functionality.",
   },
 ];
