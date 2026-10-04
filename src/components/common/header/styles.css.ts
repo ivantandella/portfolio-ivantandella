@@ -8,7 +8,6 @@ import {
 
 // Semi-transparent glass background so scrolling content below is visibly blurred
 const BG_GLASS = "rgba(13, 24, 42, 0.55)";
-const BG_SOLID = "rgba(13, 24, 42, 0.95)";
 
 export const headerBase = style({
   position: "fixed",
@@ -26,7 +25,7 @@ export const headerFlat = style({
   maxWidth: "100%",
   marginLeft: 0,
   marginRight: 0,
-  backgroundColor: BG_SOLID,
+  backgroundColor: BG_GLASS,
   border: `1px solid rgba(0, 216, 245, 0)`,
   backdropFilter: "blur(0px)",
   borderRadius: 0,
