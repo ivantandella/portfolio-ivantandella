@@ -1,34 +1,36 @@
 {
-  "name": "portfolio-ivan",
-  "version": "0.1.0",
+  "name": "portfolio-vite",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/core": "^7.12.2",
-    "@mantine/hooks": "^7.12.2",
-    "@mui/lab": "^6.0.0-beta.9",
-    "@mui/material": "^6.1.0",
-    "embla-carousel-react": "^7.1.0",
-    "next": "14.2.10",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-intersection-observer": "^9.13.1",
-    "swiper": "^11.1.14"
+    "@mantine/core": "^9.6.3",
+    "@mantine/hooks": "^9.6.3",
+    "@vanilla-extract/css": "^1.21.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-intersection-observer": "^11.0.1",
+    "swiper": "^14.3.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.10",
-    "postcss": "^8.4.45",
-    "postcss-preset-mantine": "^1.17.0",
-    "postcss-simple-vars": "^7.0.1",
-    "typescript": "^5"
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vanilla-extract/vite-plugin": "^5.2.6",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^10.10.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.6",
+    "globals": "^17.12.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.69.0",
+    "vite": "^8.3.0"
   }
 }
