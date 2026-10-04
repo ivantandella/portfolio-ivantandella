@@ -13,17 +13,19 @@ export default function ProjectSection() {
         <SectionTitle subtitle="FEATURED PROJECTS">Projects</SectionTitle>
       </FadeUp>
 
-      <div className={gridContainer}>
-        <Grid gap="xl">
-          {projects.map((project, index) => (
-            <Grid.Col key={project.title} span={{ base: 12, md: 6 }}>
-              <FadeUp delay={index * 100}>
-                <ProjectCard project={project} />
-              </FadeUp>
-            </Grid.Col>
-          ))}
-        </Grid>
-      </div>
+      <FadeUp>
+        <div className={gridContainer}>
+          <Grid gap="xl">
+            {projects.map((project, index) => (
+              <Grid.Col key={project.title} span={{ base: 12, md: 6 }}>
+                <FadeUp delay={index * 100}>
+                  <ProjectCard project={project} />
+                </FadeUp>
+              </Grid.Col>
+            ))}
+          </Grid>
+        </div>
+      </FadeUp>
     </section>
   );
 }

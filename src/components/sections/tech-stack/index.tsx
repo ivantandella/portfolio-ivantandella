@@ -9,6 +9,7 @@ import {
   skillIconImg,
   skillTitleText,
 } from "./styles.css";
+import FadeUp from "@/components/common/fade-up";
 
 function MagneticSkillCard({ title, image }: { title: string; image: string }) {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -53,17 +54,20 @@ function MagneticSkillCard({ title, image }: { title: string; image: string }) {
 export default function TechStackSection() {
   return (
     <section id={Sections.SKILL} className={sectionWrapper}>
-      <SectionTitle subtitle="EXPERTISE">Tech Stack</SectionTitle>
-
-      <div className={flexContainer}>
-        {techStack.map((tech) => (
-          <MagneticSkillCard
-            key={tech.title}
-            title={tech.title}
-            image={tech.image}
-          />
-        ))}
-      </div>
+      <FadeUp>
+        <SectionTitle subtitle="EXPERTISE">Tech Stack</SectionTitle>
+      </FadeUp>
+      <FadeUp>
+        <div className={flexContainer}>
+          {techStack.map((tech) => (
+            <MagneticSkillCard
+              key={tech.title}
+              title={tech.title}
+              image={tech.image}
+            />
+          ))}
+        </div>
+      </FadeUp>
     </section>
   );
 }
