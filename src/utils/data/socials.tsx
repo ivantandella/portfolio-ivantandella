@@ -1,6 +1,6 @@
-import IconGithub from "@/components/icons/icon-github";
-import IconInstagram from "@/components/icons/icon-instagram";
-import IconLinkedin from "@/components/icons/icon-linkedin";
+import IconGithub from "@/components/common/icons/icon-github";
+import IconInstagram from "@/components/common/icons/icon-instagram";
+import IconLinkedin from "@/components/common/icons/icon-linkedin";
 
 export const Socials = [
   {

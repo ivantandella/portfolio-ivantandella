@@ -20,16 +20,12 @@ import {
 
 const navLinks = [
   { label: "About", id: Sections.HOME, href: `#${Sections.HOME}` },
-  {
-    label: "Experience",
-    id: Sections.EXPERIENCE,
-    href: `#${Sections.EXPERIENCE}`,
-  },
+  { label: "Experience", id: Sections.EXPERIENCE, href: `#${Sections.EXPERIENCE}` },
   { label: "Projects", id: Sections.PROJECTS, href: `#${Sections.PROJECTS}` },
   { label: "Tech Stack", id: Sections.SKILL, href: `#${Sections.SKILL}` },
 ];
 
-export default function Navbar() {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("About");
@@ -48,11 +44,12 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 40);
       detectActive();
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    // Run once after mount via a rAF so it's outside the effect body
+    
+    // Run once after mount outside effect body
     const id = requestAnimationFrame(onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -100,11 +97,10 @@ export default function Navbar() {
           IVAN TANDELLA<span className={logoDot}>.</span>
         </span>
 
-        {/* Desktop links — hidden on small screens via CSS */}
+        {/* Desktop links */}
         <div
           className={desktopNav}
           style={{ display: "var(--nav-desktop-display, flex)" }}
-          // We handle responsive via globals.css media query
         >
           {navLinks.map((link) => (
             <a
@@ -118,7 +114,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Hamburger — hidden on large screens via CSS */}
+        {/* Hamburger button */}
         <button
           className={burgerWrapper}
           onClick={() => setMenuOpen((v) => !v)}
@@ -126,7 +122,6 @@ export default function Navbar() {
           style={{ display: "var(--nav-mobile-display, none)" }}
         >
           {menuOpen ? (
-            /* X icon */
             <svg
               width="18"
               height="18"
@@ -140,7 +135,6 @@ export default function Navbar() {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           ) : (
-            /* Hamburger icon */
             <svg
               width="18"
               height="18"
@@ -158,10 +152,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown — always in DOM, animated via max-height */}
-      <div
-        className={`${mobileMenuWrapper}${menuOpen ? " " + mobileMenuWrapperOpen : ""}`}
-      >
+      {/* Mobile dropdown */}
+      <div className={`${mobileMenuWrapper}${menuOpen ? " " + mobileMenuWrapperOpen : ""}`}>
         <div className={mobileMenuInner}>
           {navLinks.map((link) => (
             <a

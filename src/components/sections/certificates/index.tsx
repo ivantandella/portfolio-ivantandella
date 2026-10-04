@@ -4,7 +4,7 @@ import { certificates } from "@/utils/data/certificates";
 import { Grid } from "@mantine/core";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SectionTitle from "@/components/section-title";
+import SectionTitle from "@/components/common/section-title";
 import Button from "@/components/common/button";
 import {
   sectionWrapper,

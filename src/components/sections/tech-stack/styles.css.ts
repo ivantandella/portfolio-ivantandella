@@ -10,6 +10,7 @@ import {
 export const sectionWrapper = style({
   paddingTop: 60,
   paddingBottom: 80,
+  backgroundColor: BG_DARK,
 });
 
 export const flexContainer = style({

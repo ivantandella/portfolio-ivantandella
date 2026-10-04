@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import SectionTitle from "@/components/section-title";
-import { skills } from "@/utils/data/skills";
+import SectionTitle from "@/components/common/section-title";
+import { techStack } from "@/utils/data/tech-stack";
 import { Sections } from "@/constants/sections";
 import {
   sectionWrapper,
@@ -38,7 +38,10 @@ function MagneticSkillCard({ title, image }: { title: string; image: string }) {
       className={skillCard}
       style={{
         transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
-        transition: position.x === 0 && position.y === 0 ? "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)" : "transform 0.1s ease-out",
+        transition:
+          position.x === 0 && position.y === 0
+            ? "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+            : "transform 0.1s ease-out",
       }}
     >
       <img src={image} alt={title} className={skillIconImg} />
@@ -47,17 +50,17 @@ function MagneticSkillCard({ title, image }: { title: string; image: string }) {
   );
 }
 
-export default function SkillsSection() {
+export default function TechStackSection() {
   return (
     <section id={Sections.SKILL} className={sectionWrapper}>
       <SectionTitle subtitle="EXPERTISE">Tech Stack</SectionTitle>
 
       <div className={flexContainer}>
-        {skills.map((skill) => (
+        {techStack.map((tech) => (
           <MagneticSkillCard
-            key={skill.title}
-            title={skill.title}
-            image={skill.image}
+            key={tech.title}
+            title={tech.title}
+            image={tech.image}
           />
         ))}
       </div>

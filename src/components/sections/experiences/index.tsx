@@ -1,6 +1,6 @@
-import SectionTitle from "@/components/section-title";
-import MyTimeline from "@/components/my-timeline";
-import FadeUp from "@/components/fade-up";
+import SectionTitle from "@/components/common/section-title";
+import Timeline from "./timeline";
+import FadeUp from "@/components/common/fade-up";
 import { experiences } from "@/utils/data/experiences";
 import { Sections } from "@/constants/sections";
 import { sectionWrapper } from "./styles.css";
@@ -12,7 +12,7 @@ export default function ExperiencesSection() {
         <SectionTitle subtitle="CAREER">Experiences</SectionTitle>
       </FadeUp>
       <FadeUp delay={200}>
-        <MyTimeline experiences={experiences} />
+        <Timeline experiences={experiences} />
       </FadeUp>
     </section>
   );

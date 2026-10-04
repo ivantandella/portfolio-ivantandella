@@ -1,4 +1,4 @@
-import { Spoiler, Timeline } from "@mantine/core";
+import { Spoiler, Timeline as MantineTimeline } from "@mantine/core";
 import type { ExperienceType } from "@/utils/data/experiences";
 import { ACCENT_CYAN } from "@/constants/colors";
 import {
@@ -13,18 +13,16 @@ import {
   descriptionContent,
 } from "./styles.css";
 
-type MyTimelineProps = {
+type TimelineProps = {
   experiences: ExperienceType;
 };
 
-export default function MyTimeline(props: MyTimelineProps) {
-  const { experiences } = props;
-
+export default function Timeline({ experiences }: TimelineProps) {
   return (
     <div className={timelineContainer}>
-      <Timeline bulletSize={36} lineWidth={2} color="cyan">
+      <MantineTimeline bulletSize={36} lineWidth={2} color="cyan">
         {experiences.map((experience, index) => (
-          <Timeline.Item
+          <MantineTimeline.Item
             key={index}
             bullet={
               <div className={bulletIcon}>
@@ -65,9 +63,9 @@ export default function MyTimeline(props: MyTimelineProps) {
                 />
               </Spoiler>
             </div>
-          </Timeline.Item>
+          </MantineTimeline.Item>
         ))}
-      </Timeline>
+      </MantineTimeline>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import { Sections } from "@/constants/sections";
 import { projects } from "@/utils/data/projects";
 import { Grid } from "@mantine/core";
-import ProjectCard from "@/components/project-card";
-import SectionTitle from "@/components/section-title";
-import FadeUp from "@/components/fade-up";
+import ProjectCard from "./project-card";
+import SectionTitle from "@/components/common/section-title";
+import FadeUp from "@/components/common/fade-up";
 import { sectionWrapper, gridContainer } from "./styles.css";
 
 export default function ProjectSection() {

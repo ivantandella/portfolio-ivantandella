@@ -1,5 +1,5 @@
 import type { ProjectType } from "@/utils/data/projects";
-import IconGithub from "@/components/icons/icon-github";
+import IconGithub from "@/components/common/icons/icon-github";
 import Button from "@/components/common/button";
 import {
   cardContainer,

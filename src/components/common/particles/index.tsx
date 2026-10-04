@@ -1,11 +1,7 @@
 import { useEffect, useRef } from "react";
 
-/**
- * AntigravityParticlesProps
- * Pass `count`, `speed`, or `opacity` props to customize or debug particle quantity!
- */
-export interface AntigravityParticlesProps {
-  /** Override fixed particle count for debugging or customization. If undefined/null, dynamic density is used */
+export interface ParticlesProps {
+  /** Override fixed particle count for debugging. If undefined/null, dynamic density is used */
   count?: number;
   /** Speed multiplier (default: 0.5) */
   speed?: number;
@@ -17,9 +13,7 @@ export interface AntigravityParticlesProps {
 
 // Particle Configuration Constants (Internal)
 const DEFAULT_PARTICLE_CONFIG = {
-  // Density: 1 particle per 20000px² screen area
   AREA_PER_PARTICLE: 20000,
-  // Default cap if count prop is not provided
   MAX_PARTICLES_CAP: 45,
   BASE_SPEED: 0.5,
   BASE_ALPHA_MIN: 0.12,
@@ -37,12 +31,12 @@ interface Particle {
   baseAlpha: number;
 }
 
-export default function AntigravityParticles({
+export default function Particles({
   count: propCount,
   speed = DEFAULT_PARTICLE_CONFIG.BASE_SPEED,
   opacity = 0.8,
   repulseRadius = DEFAULT_PARTICLE_CONFIG.REPULSE_RADIUS,
-}: AntigravityParticlesProps) {
+}: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -56,8 +50,7 @@ export default function AntigravityParticles({
     let height = (canvas.height = window.innerHeight);
 
     const particles: Particle[] = [];
-    
-    // Calculate particle count: use propCount if provided, otherwise compute from screen area
+
     const particleCount =
       propCount !== undefined && propCount !== null
         ? propCount
@@ -110,13 +103,11 @@ export default function AntigravityParticles({
         p.x += p.vx;
         p.y += p.vy;
 
-        // Wrap around edges
         if (p.x < -2) p.x = width + 2;
         if (p.x > width + 2) p.x = -2;
         if (p.y < -2) p.y = height + 2;
         if (p.y > height + 2) p.y = -2;
 
-        // Repulse from mouse
         const dx = mouse.x - p.x;
         const dy = mouse.y - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -134,7 +125,7 @@ export default function AntigravityParticles({
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(0, 216, 245, ${p.alpha})`;
-        
+
         if (dist < mouse.radius) {
           ctx.shadowColor = "#00D8F5";
           ctx.shadowBlur = 6;

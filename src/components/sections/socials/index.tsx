@@ -1,7 +1,7 @@
 import { Sections } from "@/constants/sections";
 import { Socials } from "@/utils/data/socials";
 import Button from "@/components/common/button";
-import FadeUp from "@/components/fade-up";
+import FadeUp from "@/components/common/fade-up";
 import {
   sectionWrapper,
   contentContainer,
