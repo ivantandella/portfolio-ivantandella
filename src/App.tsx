@@ -1,28 +1,24 @@
-import WaveDown from "@/components/assets/wave-down";
-import WaveUp from "@/components/assets/wave-up";
-import Navbar from "@/components/navbar";
-import CertificateSection from "@/components/sections/certificate-section";
-import ExperiencesSection from "@/components/sections/experiences-section";
-import HomeSection from "@/components/sections/home-section";
-import ProjectSection from "@/components/sections/project-section";
-import SkillsSection from "@/components/sections/skills-section";
-import SocialsSection from "@/components/sections/socials-section";
+import Navbar from "@/components/common/navbar";
+import CertificateSection from "@/components/sections/certificates";
+import ExperiencesSection from "@/components/sections/experiences";
+import HomeSection from "@/components/sections/home";
+import ProjectSection from "@/components/sections/projects";
+import SkillsSection from "@/components/sections/skills";
+import SocialsSection from "@/components/sections/socials";
+import AntigravityParticles from "@/components/particles";
 
 export default function App() {
   return (
     <main>
+      {/* Particles float above all content via z-index: 50, pointer-events: none */}
+      <AntigravityParticles />
       <Navbar />
-      <div style={{ overflowX: "hidden" }}>
+      <div style={{ overflowX: "hidden", position: "relative" }}>
         <HomeSection />
-        <WaveDown />
         <ExperiencesSection />
-        <WaveUp />
         <ProjectSection />
-        <WaveDown />
         <CertificateSection />
-        <WaveUp />
         <SkillsSection />
-        <WaveDown />
         <SocialsSection />
       </div>
     </main>

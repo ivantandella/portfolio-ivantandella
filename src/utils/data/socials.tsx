@@ -7,18 +7,18 @@ export const Socials = [
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/ivan-tandella/",
     username: "Ivan Tandella",
-    icon: <IconLinkedin />,
+    icon: <IconLinkedin size={18} />,
   },
   {
     title: "Github",
     link: "https://github.com/ivantandella",
     username: "ivantandella",
-    icon: <IconGithub />,
+    icon: <IconGithub size={18} />,
   },
   {
     title: "Instagram",
     link: "https://instagram.com/ivantandella",
     username: "ivantandella",
-    icon: <IconInstagram />,
+    icon: <IconInstagram size={18} />,
   },
 ];

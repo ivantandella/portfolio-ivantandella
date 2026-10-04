@@ -1,46 +1,13 @@
+import { Assets } from "@/constants/assets";
+
 export const skills = [
-  {
-    title: "HTML",
-    image: "/images/skills/html-1.svg",
-  },
-  {
-    title: "CSS",
-    image: "/images/skills/css-3.svg",
-  },
-  {
-    title: "TailwindCSS",
-    image: "/images/skills/tailwind-css-2.svg",
-  },
-  {
-    title: "Bootstrap",
-    image: "/images/skills/bootstrap-5-1.svg",
-  },
-  {
-    title: "JavaScript",
-    image: "/images/skills/logo-javascript.svg",
-  },
-  {
-    title: "TypeScript",
-    image: "/images/skills/typescript.svg",
-  },
-  {
-    title: "React",
-    image: "/images/skills/react-2.svg",
-  },
-  {
-    title: "Next.js",
-    image: "/images/skills/next-js.svg",
-  },
-  {
-    title: "Laravel",
-    image: "/images/skills/laravel-2.svg",
-  },
-  {
-    title: "Python",
-    image: "/images/skills/python-5.svg",
-  },
-  {
-    title: "TensorFlow",
-    image: "/images/skills/tensorflow-2.svg",
-  },
+  { title: "React", image: Assets.Skills.React },
+  { title: "Next.js", image: Assets.Skills.NextJS },
+  { title: "TypeScript", image: Assets.Skills.TypeScript },
+  { title: "JavaScript", image: Assets.Skills.JavaScript },
+  { title: "TanStack Query", image: Assets.Skills.TanStackQuery },
+  { title: "TailwindCSS", image: Assets.Skills.TailwindCSS },
+  { title: "GitHub", image: Assets.Skills.GitHub },
+  { title: "HTML", image: Assets.Skills.HTML },
+  { title: "CSS", image: Assets.Skills.CSS },
 ];
