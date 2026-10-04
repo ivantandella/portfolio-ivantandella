@@ -1,5 +1,32 @@
 import { useEffect, useRef } from "react";
 
+/**
+ * AntigravityParticlesProps
+ * Pass `count`, `speed`, or `opacity` props to customize or debug particle quantity!
+ */
+export interface AntigravityParticlesProps {
+  /** Override fixed particle count for debugging or customization. If undefined/null, dynamic density is used */
+  count?: number;
+  /** Speed multiplier (default: 0.5) */
+  speed?: number;
+  /** Opacity / Alpha multiplier (default: 0.8) */
+  opacity?: number;
+  /** Repulsion radius from cursor in pixels (default: 100) */
+  repulseRadius?: number;
+}
+
+// Particle Configuration Constants (Internal)
+const DEFAULT_PARTICLE_CONFIG = {
+  // Density: 1 particle per 20000px² screen area
+  AREA_PER_PARTICLE: 20000,
+  // Default cap if count prop is not provided
+  MAX_PARTICLES_CAP: 45,
+  BASE_SPEED: 0.5,
+  BASE_ALPHA_MIN: 0.12,
+  BASE_ALPHA_MAX: 0.32,
+  REPULSE_RADIUS: 100,
+};
+
 interface Particle {
   x: number;
   y: number;
@@ -10,7 +37,12 @@ interface Particle {
   baseAlpha: number;
 }
 
-export default function AntigravityParticles() {
+export default function AntigravityParticles({
+  count: propCount,
+  speed = DEFAULT_PARTICLE_CONFIG.BASE_SPEED,
+  opacity = 0.8,
+  repulseRadius = DEFAULT_PARTICLE_CONFIG.REPULSE_RADIUS,
+}: AntigravityParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -24,18 +56,27 @@ export default function AntigravityParticles() {
     let height = (canvas.height = window.innerHeight);
 
     const particles: Particle[] = [];
-    // Sparse — 1 particle per ~20000px² area, capped at 45
-    const count = Math.min(Math.floor((width * height) / 20000), 45);
+    
+    // Calculate particle count: use propCount if provided, otherwise compute from screen area
+    const particleCount =
+      propCount !== undefined && propCount !== null
+        ? propCount
+        : Math.min(
+            Math.floor((width * height) / DEFAULT_PARTICLE_CONFIG.AREA_PER_PARTICLE),
+            DEFAULT_PARTICLE_CONFIG.MAX_PARTICLES_CAP
+          );
 
-    const mouse = { x: -9999, y: -9999, radius: 100 };
+    const mouse = { x: -9999, y: -9999, radius: repulseRadius };
 
-    for (let i = 0; i < count; i++) {
-      const alpha = 0.12 + Math.random() * 0.2;
+    for (let i = 0; i < particleCount; i++) {
+      const alpha =
+        DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MIN +
+        Math.random() * (DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MAX - DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MIN);
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * speed,
+        vy: (Math.random() - 0.5) * speed,
         radius: 1 + Math.random() * 1.5,
         alpha,
         baseAlpha: alpha,
@@ -93,7 +134,7 @@ export default function AntigravityParticles() {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(0, 216, 245, ${p.alpha})`;
-        // Soft glow only when hovered (avoids constant re-paint cost)
+        
         if (dist < mouse.radius) {
           ctx.shadowColor = "#00D8F5";
           ctx.shadowBlur = 6;
@@ -114,7 +155,7 @@ export default function AntigravityParticles() {
       window.removeEventListener("mouseleave", onMouseLeave);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [propCount, speed, repulseRadius]);
 
   return (
     <canvas
@@ -125,10 +166,9 @@ export default function AntigravityParticles() {
         left: 0,
         width: "100vw",
         height: "100vh",
-        // Floats ABOVE content so it's always visible, never covered by section bg
-        zIndex: 0,
-        // Clicks pass through to elements below
+        zIndex: 50,
         pointerEvents: "none",
+        opacity,
       }}
     />
   );

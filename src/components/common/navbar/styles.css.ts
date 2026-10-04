@@ -7,7 +7,6 @@ import {
 } from "@/constants/colors";
 
 // Use rgba for bg on both states so the transition is purely opacity, no flash
-const BG_DARK_SOLID = "rgba(13, 24, 42, 1)";
 const BG_DARK_GLASS = "rgba(13, 24, 42, 0.7)";
 
 export const headerBase = style({
@@ -27,8 +26,6 @@ export const headerFlat = style({
   maxWidth: "100%",
   marginLeft: 0,
   marginRight: 0,
-  backgroundColor: BG_DARK_SOLID,
-  // Use border (not borderBottom) so all 4 sides exist in both states, only color changes
   border: `1px solid rgba(0, 216, 245, 0)`,
   backdropFilter: "none",
   WebkitBackdropFilter: "none",
@@ -36,11 +33,11 @@ export const headerFlat = style({
   boxShadow: "none",
 });
 
-// Floating pill when scrolled
+// Floating pill when scrolled — matching content width max-width 1440
 export const headerPill = style({
   top: 16,
-  width: "calc(100% - 48px)",
-  maxWidth: 1100,
+  width: "calc(100% - 40px)",
+  maxWidth: 1440,
   marginLeft: "auto",
   marginRight: "auto",
   backgroundColor: BG_DARK_GLASS,
@@ -62,13 +59,23 @@ export const headerFlatOpen = style({
   borderBottom: `1px solid rgba(0, 216, 245, 0.2)`,
 });
 
+// Inner flex matching exact content bounds & padding
 export const innerFlex = style({
   height: 64,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingLeft: 24,
-  paddingRight: 24,
+  paddingLeft: 50,
+  paddingRight: 50,
+  maxWidth: 1440,
+  marginLeft: "auto",
+  marginRight: "auto",
+  "@media": {
+    "(max-width: 48em)": {
+      paddingLeft: 20,
+      paddingRight: 20,
+    },
+  },
 });
 
 export const logo = style({

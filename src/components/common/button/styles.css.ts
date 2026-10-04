@@ -54,7 +54,7 @@ export const secondaryVariant = style({
       borderColor: ACCENT_CYAN,
       color: ACCENT_CYAN,
       boxShadow: `0 0 14px ${ACCENT_CYAN}33`,
-      backgroundColor: `rgba(0, 216, 245)`,
+      // backgroundColor: `rgba(0, 216, 245)`,
       transform: "translateY(-2px)",
     },
     "&:active": {

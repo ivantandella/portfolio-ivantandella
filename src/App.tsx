@@ -11,7 +11,7 @@ export default function App() {
   return (
     <main>
       {/* Particles float above all content via z-index: 50, pointer-events: none */}
-      <AntigravityParticles />
+      <AntigravityParticles count={80} />
       <Navbar />
       <div style={{ overflowX: "hidden", position: "relative" }}>
         <HomeSection />

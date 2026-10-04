@@ -23,21 +23,23 @@ export const subtitleText = style({
   color: ACCENT_CYAN,
   letterSpacing: "2.5px",
   textTransform: "uppercase",
-  marginBottom: 6,
+  marginBottom: 8,
 });
 
 export const titleText = style({
   color: TEXT_WHITE,
-  fontSize: "44px",
+  fontSize: "clamp(2rem, 4vw, 2.75rem)",
   fontWeight: 800,
-  marginBottom: "16px",
+  letterSpacing: "-0.5px",
   lineHeight: 1.2,
+  marginBottom: 16,
 });
 
 export const descriptionText = style({
   color: ACCENT_GRAY,
   fontSize: "16px",
-  maxWidth: 500,
+  maxWidth: 520,
+  lineHeight: 1.6,
   marginBottom: 32,
 });
 

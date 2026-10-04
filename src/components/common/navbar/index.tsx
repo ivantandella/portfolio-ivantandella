@@ -20,7 +20,11 @@ import {
 
 const navLinks = [
   { label: "About", id: Sections.HOME, href: `#${Sections.HOME}` },
-  { label: "Experience", id: Sections.EXPERIENCE, href: `#${Sections.EXPERIENCE}` },
+  {
+    label: "Experience",
+    id: Sections.EXPERIENCE,
+    href: `#${Sections.EXPERIENCE}`,
+  },
   { label: "Projects", id: Sections.PROJECTS, href: `#${Sections.PROJECTS}` },
   { label: "Tech Stack", id: Sections.SKILL, href: `#${Sections.SKILL}` },
 ];
@@ -44,7 +48,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
       detectActive();
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -155,7 +159,9 @@ export default function Navbar() {
       </div>
 
       {/* Mobile dropdown — always in DOM, animated via max-height */}
-      <div className={`${mobileMenuWrapper}${menuOpen ? " " + mobileMenuWrapperOpen : ""}`}>
+      <div
+        className={`${mobileMenuWrapper}${menuOpen ? " " + mobileMenuWrapperOpen : ""}`}
+      >
         <div className={mobileMenuInner}>
           {navLinks.map((link) => (
             <a
