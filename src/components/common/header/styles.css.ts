@@ -6,8 +6,9 @@ import {
   TEXT_WHITE,
 } from "@/constants/colors";
 
-// Use rgba for bg on both states so the transition is purely opacity, no flash
-const BG_DARK_GLASS = "rgba(13, 24, 42, 0.7)";
+// Semi-transparent glass background so scrolling content below is visibly blurred
+const BG_GLASS = "rgba(13, 24, 42, 0.55)";
+const BG_SOLID = "rgba(13, 24, 42, 0.95)";
 
 export const headerBase = style({
   position: "fixed",
@@ -15,7 +16,7 @@ export const headerBase = style({
   right: 0,
   zIndex: 999,
   transition:
-    "top 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), margin 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+    "top 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), margin 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.35s ease",
 });
 
 // Flat header when at top of page
@@ -25,9 +26,9 @@ export const headerFlat = style({
   maxWidth: "100%",
   marginLeft: 0,
   marginRight: 0,
+  backgroundColor: BG_SOLID,
   border: `1px solid rgba(0, 216, 245, 0)`,
-  backdropFilter: "none",
-  WebkitBackdropFilter: "none",
+  backdropFilter: "blur(0px)",
   borderRadius: 0,
   boxShadow: "none",
 });
@@ -39,9 +40,8 @@ export const headerPill = style({
   maxWidth: 1440,
   marginLeft: "auto",
   marginRight: "auto",
-  backgroundColor: BG_DARK_GLASS,
-  backdropFilter: "blur(20px) saturate(180%)",
-  WebkitBackdropFilter: "blur(20px) saturate(180%)",
+  backgroundColor: BG_GLASS,
+  backdropFilter: "blur(16px) saturate(180%)",
   border: `1px solid rgba(0, 216, 245, 0.3)`,
   borderRadius: 32,
   boxShadow: `0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 216, 245, 0.12)`,
@@ -49,6 +49,7 @@ export const headerPill = style({
 
 // When mobile menu is open on a scrolled (pill) header — expands to rounded rect
 export const headerPillOpen = style({
+  backgroundColor: "rgba(13, 24, 42, 0.92)",
   border: `1px solid rgba(0, 216, 245, 0.45)`,
   boxShadow: `0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 216, 245, 0.2)`,
 });
@@ -65,7 +66,7 @@ export const innerFlex = style({
   alignItems: "center",
   justifyContent: "space-between",
   paddingLeft: 50,
-  paddingRight: 50,
+  paddingRight: 12,
   maxWidth: 1440,
   marginLeft: "auto",
   marginRight: "auto",
@@ -141,7 +142,7 @@ export const burgerWrapper = style({
   },
 });
 
-// Mobile dropdown container — always rendered, height animates via max-height
+// Mobile dropdown container — height animates via max-height
 export const mobileMenuWrapper = style({
   overflow: "hidden",
   maxHeight: 0,
