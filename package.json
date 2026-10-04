@@ -1,13 +1,17 @@
 {
-  "name": "portfolio-vite",
+  "name": "portfolio-ivan",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "eslint . --fix",
+    "ts-check": "tsc -b",
+    "bump:patch": "bun pm version patch --no-git-tag-version",
+    "bump:minor": "bun pm version minor --no-git-tag-version",
+    "bump:major": "bun pm version major --no-git-tag-version"
   },
   "dependencies": {
     "@mantine/core": "^9.6.3",
