@@ -15,7 +15,7 @@ export const experiences: ExperienceType = [
     date: "Aug 2024 - Present",
     image: Assets.Experiences.Springkraf,
     description:
-      "- Developed and maintained 2 responsive web applications using React.js and Next.js, ensuring optimal performance across devices.<br/>- Built a mobile application using React Native, delivering a smooth and consistent user experience.<br/>- Implemented Atomic Design principles to create reusable and scalable UI components, improving development efficiency.<br/>- Collaborated closely with Backend and UI/UX design teams to ensure seamless API integration and interface consistency.<br/>- Utilized TypeScript to enhance code quality, maintainability, and type safety across all projects",
+      "- Engineered cross-platform web and mobile applications using React.js, Next.js, and React Native (Expo), delivering responsive interfaces tailored to diverse client requirements across multiple industries.<br/>- Architected modular UI component based on Atomic Design principles, significantly improving code reusability, design consistency, and team development speed.<br/>- Applied TypeScript across all projects to enforce strict type safety, catch bugs early in development, and maintain high code quality across growing codebases. <br/>- Integrated APIs and managed application state using React hooks to ensure seamless and responsive data flow. <br/>- Collaborated UI/UX designers and backend developers, to translate designs into functional features and ensure seamless API alignment.",
   },
   {
     position: "Mentor",
@@ -23,7 +23,7 @@ export const experiences: ExperienceType = [
     date: "Feb 2024 - Jul 2024",
     image: Assets.Experiences.Bangkit,
     description:
-      "Mentor plays a crucial role in guiding participants and providing a supportive learning environment that boosts students' motivation.<br/><br/>- Lead and support a cohort of 25 students through weekly mentoring session, fostering their academic and personal growth.<br/>- Monitor students' learning progress throughout the program to ensure continuous improvement and addressing any challenges promptly.<br/>- Organize and facilitate 3 study group sessions to assist students facing difficulties to enhance their understanding and performance.<br/>- Assist instructors during sessions, monitor activities, and compile detailed reports for up to 14 Instructor-Led Training (ILT) sessions.",
+      "- Lead and support a cohort of 25 students through weekly mentoring session, fostering their academic and personal growth.<br/>-	Monitor students' learning progress throughout the program to ensure continuous improvement and addressing any challenges promptly.<br/>- Assisted instructors during sessions, monitor activities, and compile detailed reports for up to 14 Instructor-Led Training (ILT) sessions.",
   },
   // {
   //   position: "Frontend Web Developer",
