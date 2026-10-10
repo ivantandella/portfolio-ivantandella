@@ -55,8 +55,10 @@ export default function Particles({
       propCount !== undefined && propCount !== null
         ? propCount
         : Math.min(
-            Math.floor((width * height) / DEFAULT_PARTICLE_CONFIG.AREA_PER_PARTICLE),
-            DEFAULT_PARTICLE_CONFIG.MAX_PARTICLES_CAP
+            Math.floor(
+              (width * height) / DEFAULT_PARTICLE_CONFIG.AREA_PER_PARTICLE,
+            ),
+            DEFAULT_PARTICLE_CONFIG.MAX_PARTICLES_CAP,
           );
 
     const mouse = { x: -9999, y: -9999, radius: repulseRadius };
@@ -64,7 +66,9 @@ export default function Particles({
     for (let i = 0; i < particleCount; i++) {
       const alpha =
         DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MIN +
-        Math.random() * (DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MAX - DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MIN);
+        Math.random() *
+          (DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MAX -
+            DEFAULT_PARTICLE_CONFIG.BASE_ALPHA_MIN);
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -157,7 +161,7 @@ export default function Particles({
         left: 0,
         width: "100vw",
         height: "100vh",
-        zIndex: 50,
+        zIndex: 0,
         pointerEvents: "none",
         opacity,
       }}

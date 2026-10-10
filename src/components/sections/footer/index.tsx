@@ -12,7 +12,7 @@ import {
   copyrightText,
 } from "./styles.css";
 
-export default function SocialsSection() {
+export default function Footer() {
   return (
     <footer id={Sections.SOCIALS} className={sectionWrapper}>
       <div className={contentContainer}>
@@ -48,8 +48,7 @@ export default function SocialsSection() {
         </FadeUp>
 
         <p className={copyrightText}>
-          © {new Date().getFullYear()} Ivan Tandella. Crafted with React,
-          Mantine & Vanilla Extract.
+          © {new Date().getFullYear()} Ivan Tandella
         </p>
       </div>
     </footer>

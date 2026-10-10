@@ -7,10 +7,10 @@ export const techStack = [
   { title: "JavaScript", image: Assets.Skills.JavaScript },
   { title: "TanStack Query", image: Assets.Skills.TanStackQuery },
   { title: "TailwindCSS", image: Assets.Skills.TailwindCSS },
-  { title: "Laravel", image: Assets.Skills.Laravel },
+  // { title: "Laravel", image: Assets.Skills.Laravel },
   { title: "GitHub", image: Assets.Skills.GitHub },
-  { title: "Python", image: Assets.Skills.Python },
-  { title: "TensorFlow", image: Assets.Skills.TensorFlow },
+  // { title: "Python", image: Assets.Skills.Python },
+  // { title: "TensorFlow", image: Assets.Skills.TensorFlow },
   { title: "HTML", image: Assets.Skills.HTML },
   { title: "CSS", image: Assets.Skills.CSS },
 ];

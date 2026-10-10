@@ -5,12 +5,12 @@ import ExperiencesSection from "@/components/sections/experiences";
 import HomeSection from "@/components/sections/home";
 import ProjectSection from "@/components/sections/projects";
 import TechStackSection from "@/components/sections/tech-stack";
-import SocialsSection from "@/components/sections/socials";
+import Footer from "@/components/sections/footer";
 
 export default function App() {
   return (
     <main>
-      <Particles count={80} />
+      <Particles />
       <Header />
       <div style={{ overflowX: "hidden", position: "relative" }}>
         <HomeSection />
@@ -18,7 +18,7 @@ export default function App() {
         <ProjectSection />
         <CertificateSection />
         <TechStackSection />
-        <SocialsSection />
+        <Footer />
       </div>
     </main>
   );
