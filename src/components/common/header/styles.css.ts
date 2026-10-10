@@ -27,7 +27,7 @@ export const headerFlat = style({
   marginRight: 0,
   backgroundColor: BG_GLASS,
   border: `1px solid rgba(0, 216, 245, 0)`,
-  backdropFilter: "blur(0px)",
+  backdropFilter: "blur(16px)",
   borderRadius: 0,
   boxShadow: "none",
 });
@@ -56,6 +56,8 @@ export const headerPillOpen = style({
 // When mobile menu is open on flat (top) header
 export const headerFlatOpen = style({
   borderBottom: `1px solid rgba(0, 216, 245, 0.2)`,
+  backgroundColor: "rgba(13, 24, 42, 0.92)",
+  backdropFilter: "blur(16px) saturate(180%)",
 });
 
 // Inner flex matching exact content bounds & padding

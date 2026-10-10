@@ -17,10 +17,17 @@ import {
   mobileMenuInner,
   mobileNavItem,
 } from "./styles.css";
+import XIcon from "../icons/x-icon";
+import MenuIcon from "../icons/menu-icon";
+import ChevronRightIcon from "../icons/chevron-right-icon";
 
 const navLinks = [
   { label: "About", id: Sections.HOME, href: `#${Sections.HOME}` },
-  { label: "Experience", id: Sections.EXPERIENCE, href: `#${Sections.EXPERIENCE}` },
+  {
+    label: "Experience",
+    id: Sections.EXPERIENCE,
+    href: `#${Sections.EXPERIENCE}`,
+  },
   { label: "Projects", id: Sections.PROJECTS, href: `#${Sections.PROJECTS}` },
   { label: "Tech Stack", id: Sections.SKILL, href: `#${Sections.SKILL}` },
 ];
@@ -48,7 +55,7 @@ export default function Header() {
       detectActive();
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    
+
     // Run once after mount outside effect body
     const id = requestAnimationFrame(onScroll);
     return () => {
@@ -73,21 +80,6 @@ export default function Header() {
   ]
     .filter(Boolean)
     .join(" ");
-
-  const chevron = (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="9 18 15 12 9 6" />
-    </svg>
-  );
 
   return (
     <header className={headerClasses}>
@@ -121,39 +113,14 @@ export default function Header() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           style={{ display: "var(--nav-mobile-display, none)" }}
         >
-          {menuOpen ? (
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#E0E1DD"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          ) : (
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#E0E1DD"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            >
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          )}
+          {menuOpen ? <XIcon /> : <MenuIcon />}
         </button>
       </div>
 
       {/* Mobile dropdown */}
-      <div className={`${mobileMenuWrapper}${menuOpen ? " " + mobileMenuWrapperOpen : ""}`}>
+      <div
+        className={`${mobileMenuWrapper}${menuOpen ? " " + mobileMenuWrapperOpen : ""}`}
+      >
         <div className={mobileMenuInner}>
           {navLinks.map((link) => (
             <a
@@ -166,7 +133,7 @@ export default function Header() {
               }}
             >
               <span>{link.label}</span>
-              {chevron}
+              <ChevronRightIcon />
             </a>
           ))}
         </div>
