@@ -18,7 +18,9 @@ import {
 
 const heroTechStack = [
   { title: "React", icon: Assets.Skills.React },
+  { title: "React Native", icon: Assets.Skills.React },
   { title: "Next.js", icon: Assets.Skills.NextJS },
+  { title: "Expo", icon: Assets.Skills.Expo },
   { title: "JS", icon: Assets.Skills.JavaScript },
   { title: "TS", icon: Assets.Skills.TypeScript },
 ];
@@ -29,7 +31,7 @@ export default function HomeSection() {
       <Grid
         maw={UNIVERSAL_WIDTH}
         w="100%"
-        px={{ base: 20, sm: 50 }}
+        px={{ base: 24, sm: 50 }}
         align="center"
       >
         <Grid.Col span={{ base: 12, md: 7 }} order={{ base: 2, md: 1 }}>
@@ -38,11 +40,12 @@ export default function HomeSection() {
               <span className={cyanAccent}>FRONTEND ENGINEER,</span>
               <br />
               <span className={whiteText}>
-                crafting fast, scalable, and delightful user experiences.
+                building web and mobile apps people love to use.
               </span>
             </h1>
             <p className={subText}>
-              Frontend engineer with expertise in building responsive, high-performance web applications with React, Next.js, and TypeScript.
+              Frontend engineer at a software development company, shipping
+              production apps with React, Next.js, React Native, and TypeScript.
             </p>
 
             <div className={badgeRow}>

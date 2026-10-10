@@ -6,6 +6,7 @@ import {
   ACCENT_GRAY,
   TEXT_WHITE,
 } from "@/constants/colors";
+import breakpoints from "@/styles/breakpoint";
 
 export const pulseGlow = keyframes({
   "0%": { boxShadow: `0 0 15px ${ACCENT_CYAN}40, 0 0 30px ${ACCENT_CYAN}20` },
@@ -23,8 +24,13 @@ export const homeContainer = style({
 export const headlineText = style({
   fontSize: "clamp(2.5rem, 5vw, 3.8rem)",
   fontWeight: 800,
-  lineHeight: 1.1,
+  lineHeight: 1.2,
   letterSpacing: "-1px",
+  "@media": {
+    [breakpoints.screenLg]: {
+      lineHeight: 1.1,
+    },
+  },
 });
 
 export const cyanAccent = style({
