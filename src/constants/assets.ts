@@ -14,6 +14,8 @@ export const Assets = {
     TensorFlow: "/images/skills/tensorflow-2.svg",
     TanStackQuery: "/images/skills/tanstack-query.svg",
     GitHub: "/images/skills/github.svg",
+    Expo: "/images/skills/expo.svg",
+    VanillaExtract: "/images/skills/vanilla-extract.svg",
   },
   Experiences: {
     Springkraf: "/images/experiences/springkraf.png",

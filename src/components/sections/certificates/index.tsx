@@ -78,7 +78,7 @@ export default function CertificateSection() {
 
           <div className={buttonFlex}>
             <Button variant="secondary" onClick={() => setShowAll((v) => !v)}>
-              {showAll ? "SHOW CAROUSEL" : "VIEW ALL"}
+              {showAll ? "SHOW LESS" : "VIEW ALL"}
             </Button>
           </div>
         </div>

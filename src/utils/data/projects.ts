@@ -18,7 +18,8 @@ export const projects: ProjectType[] = [
       "A robust forum-based application enabling users to register, create threads, vote, and engage in real-time discussions with async state management.",
     technologies: ["Next.js", "Mantine", "TypeScript", "TanStack Query"],
     link: "https://github.com/ivantandella/forum-next-js",
-    liveLink: "https://github.com/ivantandella/forum-next-js",
+    liveLink: "https://forum-next-js-livid.vercel.app/",
+    isMobileMockup: true,
   },
   {
     title: "Notes App",
@@ -27,7 +28,7 @@ export const projects: ProjectType[] = [
       "A modern note-taking web app with archive, search, and instant deletion capabilities wrapped in a clean responsive UI.",
     technologies: ["React", "TypeScript", "Mantine", "Vite"],
     link: "https://github.com/ivantandella/notes-react",
-    liveLink: "https://github.com/ivantandella/notes-react",
+    liveLink: "https://notes-react-seven.vercel.app",
     isMobileMockup: true,
   },
   // {

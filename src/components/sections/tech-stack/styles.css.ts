@@ -14,24 +14,35 @@ export const sectionWrapper = style({
 });
 
 export const flexContainer = style({
-  display: "flex",
-  flexDirection: "row",
+  display: "grid",
   gap: 16,
-  flexWrap: "wrap",
-  justifyContent: "center",
-  maxWidth: 1440,
+  maxWidth: 1000,
   marginLeft: "auto",
   marginRight: "auto",
   paddingLeft: 20,
   paddingRight: 20,
+
+  // Mobile: 2 columns
+  gridTemplateColumns: "repeat(2, 1fr)",
+
+  "@media": {
+    // Tablet: 3 columns (9 items → 3 + 3 + 3)
+    "screen and (min-width: 640px)": {
+      gridTemplateColumns: "repeat(3, 1fr)",
+    },
+    // Desktop: 5 columns
+    "screen and (min-width: 1024px)": {
+      gridTemplateColumns: "repeat(5, 1fr)",
+    },
+  },
 });
 
 export const skillCard = style({
   backgroundColor: CARD_BG,
   border: `1px solid ${ACCENT_GRAY}33`,
   borderRadius: "14px",
-  width: 140,
-  height: 130,
+  width: "100%", // fill the grid cell instead of fixed 140
+  minHeight: 130,
   padding: 16,
   display: "flex",
   flexDirection: "column",
