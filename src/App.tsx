@@ -1,6 +1,5 @@
 import Header from "@/components/common/header";
 import Particles from "@/components/common/particles";
-import CertificateSection from "@/components/sections/certificates";
 import ExperiencesSection from "@/components/sections/experiences";
 import HomeSection from "@/components/sections/home";
 import ProjectSection from "@/components/sections/projects";
@@ -16,7 +15,7 @@ export default function App() {
         <HomeSection />
         <ExperiencesSection />
         <ProjectSection />
-        <CertificateSection />
+        {/* <CertificateSection /> */}
         <TechStackSection />
         <Footer />
       </div>
